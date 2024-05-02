@@ -5,6 +5,10 @@ header{
     margin-bottom: var(--m);
     display: flex;
     justify-content: space-between;
+    
+    img{
+        filter: brightness(0) invert(1);
+    }
 }
 
 .swipe-cards{
@@ -55,6 +59,11 @@ header{
         width: 30%;
         display: flex;
         justify-content: space-between;
+
+        button{
+            background-color: var(--color-beige);
+            border-radius: var(--xxs);
+        }
     }
 }
 
@@ -63,11 +72,21 @@ header{
 
     tr{
         border-top: 2px solid var(--color-black);
+        justify-content: space-between;
+        text-align: right;
 
         td{
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row;
+            padding-right: var(--xss);
+
+            ul{
+                li{
+                    display: inline-flex;
+                    color: var(--color-white);
+                    background-color: var(--color-red);
+                    padding: var(--xxs);
+                    margin-bottom: var(--m);
+                }
+            }
         }
     }
     
@@ -75,6 +94,42 @@ header{
 
 @media screen and (width <= 600px) {
     .content-table .hides{
+        display: none;
+    }
+}
+
+footer{
+    background-color: var(--color-purple);
+    border-top-left-radius: var(--s);
+    border-top-right-radius: var(--s);
+    margin-top: var(--m);
+    margin-left: var(--s);
+    margin-right: var(--s);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--s);
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+
+        li{
+            color: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+}
+
+@media screen and (width >= 600px) {
+    footer{
         display: none;
     }
 }
