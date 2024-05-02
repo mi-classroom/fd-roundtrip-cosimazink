@@ -1,3 +1,80 @@
 header{
     background-color: var(--color-purple);
+    border-bottom-left-radius: var(--s);
+    border-bottom-right-radius: var(--s);
+    margin-bottom: var(--m);
+    display: flex;
+    justify-content: space-between;
+}
+
+.swipe-cards{
+    display: flex;
+    background-color: var(--color-green);
+    border-radius: var(--s);
+
+    .card{
+        color: var(--color-white);
+        display: flex;
+        width: 100%;
+
+        img{
+            width: 60%;
+            object-fit: cover;
+            border-top-left-radius: var(--s);
+            border-bottom-left-radius: var(--s);
+        }
+
+        div{
+            margin: var(--s);
+
+            h2{
+                margin-bottom: var(--xs);
+            }
+
+            p{
+                line-height: var(--lh-normal);
+            }
+
+            .lookup-content{
+                display: flex;
+                justify-content: center;
+                font-weight: var(--fw-bold);
+                margin-top: var(--xs);
+            }
+        }
+    }
+}
+
+.table-head{
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--m);
+    margin-bottom: var(--s);;
+
+    div{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.content-table{
+    width: 100%;
+
+    tr{
+        border-top: 2px solid var(--color-black);
+
+        td{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+    
+}
+
+@media screen and (width <= 600px) {
+    .content-table .hides{
+        display: none;
+    }
 }

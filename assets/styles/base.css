@@ -38,7 +38,13 @@
   
   
   h1{
+    color: var(--color-white);
     font-size: var(--xl);
+    font-weight: var(--fw-light);
+    ::after{
+        content: "4All";
+        color: var(--color-orange);
+    }
   }
   
   h2{
